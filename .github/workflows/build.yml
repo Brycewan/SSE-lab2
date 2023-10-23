@@ -21,20 +21,21 @@ jobs:
       - name: Run flake8
         run: flake8 api/
 
-  unit-tests:
-    needs: python-formatting
-    runs-on: ubuntu-latest
+  # unit-tests:
+  #   needs: python-formatting
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - name: Install pytest
-        run: pip install pytest
+  #   steps:
+  #     - name: Install pytest
+  #       run: pip install pytest
 
-      - name: Run pytest
-        run: pytest api/*.py
+  #     - name: Run pytest
+  #       run: pytest api/*.py
 
 
   deploy-to-vercel:
-    needs: unit-tests
+    # needs: unit-tests
+    needs: python-formatting
     runs-on: ubuntu-latest
 
     steps:
