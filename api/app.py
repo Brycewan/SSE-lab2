@@ -25,4 +25,4 @@ def process_query(query_parameter):
 @app.route("/query", methods=["GET"])
 def query():
     q_param = request.args.get('q')
-    process_query(q_param)
+    return process_query(q_param)
