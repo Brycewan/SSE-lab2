@@ -16,12 +16,13 @@ def submit():
 
 def process_query(query_parameter):
     if query_parameter == "dinosaurs":
-        return "Dinosaurs ruled the Earth 200 million years ago"
+        return "Dinosaurs ruled \
+        the Earth 200 million years ago"
     if query_parameter == "asteroids":
         return "Unknown"
 
 
-@app.route("/query", methods=["GET"])
-def query():
-    q_param = request.args.get('q')
-    process_query(q_param)
+# @app.route("/query", methods=["GET"])
+# def query():
+#     q_param = request.args.get('q')
+#     process_query(q_param)
