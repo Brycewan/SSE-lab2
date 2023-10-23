@@ -28,9 +28,9 @@ jobs:
     steps:
       - name: Install pytest
         run: pip install pytest
-        
+
       - name: Run pytest
-        run: pytest api/
+        run: pytest api/*.py
 
 
   deploy-to-vercel:
