@@ -27,7 +27,7 @@ jobs:
 
     steps:
       - name: Run pytest
-        uses: pytest api/
+        run: pytest api/
 
 
   deploy-to-vercel:
