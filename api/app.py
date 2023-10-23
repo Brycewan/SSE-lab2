@@ -22,7 +22,7 @@ def process_query(query_parameter):
         return "Unknown"
 
 
-# @app.route("/query", methods=["GET"])
-# def query():
-#     q_param = request.args.get('q')
-#     process_query(q_param)
+@app.route("/query", methods=["GET"])
+def query():
+    q_param = request.args.get('q')
+    process_query(q_param)
