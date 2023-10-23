@@ -26,6 +26,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Install pytest
+        run: pip install pytest
+        
       - name: Run pytest
         run: pytest api/
 
